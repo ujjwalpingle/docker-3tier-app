@@ -1,0 +1,20 @@
+# Environment variables
+.env
+
+# Node
+node_modules/
+build/
+npm-debug.log*
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Docker
+docker-compose.override.yml 

@@ -21,7 +21,6 @@ docker-compose down
 3. **Access the App**
    - Website: http://localhost:3000
    - API: http://localhost:5000
-   - Database: localhost:5432
 
 ## Useful Commands
 
@@ -31,15 +30,7 @@ docker-compose logs
 
 # Check running containers
 docker ps
-
-# Access database
-docker exec -it my-app-db-1 psql -U postgres -d mydatabase
 ```
-
-## Database Info
-- Username: postgres
-- Password: password
-- Database: mydatabase
 
 ## Project Structure
 
