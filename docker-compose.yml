@@ -5,17 +5,11 @@ services:
     build: ./frontend
     ports:
       - "3000:3000"
-    depends_on:
-      - backend
-    environment:
-      - REACT_APP_API_URL=http://backend:5000
 
   backend:
     build: ./backend
     ports:
       - "5000:5000"
-    depends_on:
-      - db
     environment:
       - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
 
