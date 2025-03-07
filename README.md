@@ -1,38 +1,64 @@
-# Simple Three-Tier Docker App
+# Simple Three-Tier Docker App  
 
-A basic web application with React, Flask, and PostgreSQL.
+![Three-Tier Architecture](/assets/Simple%20Three-Tier%20Docker%20App.jpg)  
 
-## Setup Steps
+A basic web application using **React (Frontend)**, **Flask (Backend API)**, and **PostgreSQL (Database)**, containerized with Docker for easy deployment.  
 
-1. Clone the repo
-2. Copy `.env.example` to `.env`
-3. Update `.env` with real credentials
-4. Run `docker-compose up --build`
+## Prerequisites  
 
-## Access Points
+Ensure you have the following installed:  
+- [Docker](https://docs.docker.com/get-docker/)  
+- [Docker Compose](https://docs.docker.com/compose/install/)  
 
-- Website: http://localhost:3000
-- API: http://localhost:5000
-- Database: localhost:5432
+## Setup & Run  
 
-## Useful Commands
+1. **Clone the repository:**  
+   ```bash
+   git clone https://github.com/your-repo/three-tier-app.git
+   cd three-tier-app
+   ```  
+2. **Set up environment variables:**  
+   ```bash
+   cp .env.example .env
+   ```  
+   - Update `.env` with your database credentials.  
+3. **Start the application:**  
+   ```bash
+   docker-compose up --build
+   ```  
+
+## Access Points  
+
+- **Frontend (React):** [http://localhost:3000](http://localhost:3000)  
+- **Backend API (Flask):** [http://localhost:5000](http://localhost:5000)  
+- **PostgreSQL Database:** `localhost:5432`  
+
+## Useful Commands  
 
 ```bash
 # Start the app
-docker-compose up --build
+docker-compose up --build  
 
 # Stop the app
-docker-compose down
+docker-compose down  
 
 # View logs
-docker-compose logs
+docker-compose logs  
+
+# Rebuild containers
+docker-compose up --build --force-recreate  
 ```
 
-## Project Structure
+## Project Structure  
+
 ```
-my-app/
-├── frontend/  (React)
-├── backend/   (Flask)
-└── docker-compose.yml
+three-tier-app/
+├── frontend/    # React application
+├── backend/     # Flask API server
+├── db/          # Database-related scripts (optional)
+└── docker-compose.yml  # Docker configuration
 ```
 
+---
+
+This project provides a simple yet scalable foundation for a three-tier web application using Docker. 🚀
